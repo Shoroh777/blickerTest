@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <title>Відпочинок 365</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.min.css">
+
+</head>
+<body>
+    <header class="header">
+        <div class="header__container">
+            <nav class="header__navigation">
+                <div class="header__header-logo">
+                    <a href=""><img src="img/header/logo.png" class="header__logo-img" alt="Логотип «Відпочинок 365»">
+                    <p class="header__logo-text">Мережа готелів</p></a>
+                    <button class="button__menu-mobile" onclick="toggleOpenMenu(dropdownMenu)">☰</button>
+                </div>
+                <ul class="site-navigation">
+                    <li>
+                        <a href="#" class="site-navigation-category">Тури</a>
+                    </li>
+                    <li>
+                        <a href="#" class="site-navigation-category">Проживання</a>
+                    </li>
+                    <li>
+                        <a href="#" class="site-navigation-category select-page">Послуги</a>
+                    </li>
+                    <li>
+                        <a href="#" class="site-navigation-category">Відгуки</a>
+                    </li>
+                    <li>
+                        <a href="#" class="site-navigation-category">Контакты</a>
+                    </li>
+                </ul>
+                <ul class="header__numbers-list">
+                    <li class="header__number-item">
+                        <a href="tel:+380800505365">0 800 505 365 <span>(Безкоштовно)</span></a>
+                    </li>
+                    <li class="header__number-item">
+                        <img src="img/header/vodafone-logo.png" alt="MTC" class="header__phone-logo">
+                        <a href="tel:+380800505365">080 050-53-65</a>
+                    </li>
+                    <li class="header__number-item">
+                        <img src="img/header/kyivstar-logo.png" alt="Киевстар" class="header__phone-logo">
+                        <a href="tel:+380675240524">067 524-05-24</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main class="container">
+
+        <h1 class="visually-hidden">Сайт "Відпочинок 365"</h1>
+
+        <section class="slider">
+            <div class="slider__container">
+                <div class="slider__arrow-left" onclick="sliderPrev()"></div>
+                <section class="slider__content">
+                    <div class="slider__headline">
+                        <div class="slider__line"></div>
+                        <h2 class="slider__headline-text">
+                            <p class="slider__headline-top">
+                                Відкривай
+                            </p>
+                            <span class="slider__headline-bottom">Україну 365</span>
+                        </h2>
+                    </div>
+                    <button class="slider__button-more">Дізнатися більше</button>
+                </section>
+
+                <div class="slider__arrow-right" onclick="sliderNext()"></div>
+            </div>
+            <div class="slider__container-search">
+                <div class="slider__search">
+                    <p>Шукайте пропозиції</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="search">
+            <h2 class="visually-hidden">Шукайте пропозиції</h2>
+            <div class="search__container">
+                <div class="where">
+                    <input type="text" class="search__place" placeholder="Куди ви хочете поїхати?" onfocus="toggleOpen(searchPlace)" onblur="toggleOpen(searchPlace)">
+                    <div class="place-dropdown">
+                        <ul>
+                            <li>Трускавець, Львівська обл., Україна</li>
+                            <li>Трускавець, Львівська обл., Україна</li>
+                            <li>Трускавець, Львівська обл., Україна</li>
+                            <li>Трускавець, Львівська обл., Україна</li>
+                            <li>Трускавець, Львівська обл., Україна</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="calendar">
+                    <div class="calendar-input" onclick="toggleOpenDate(searchDate)">
+                        <img src="img/search/calendar.png" alt="">
+                        <p class="inputDate">Заїзд</p>
+                        <p>-</p>
+                        <p class="outputDate">Від"їзд</p>
+                    </div>
+                    <div class="calendar-dropdown displayNone">
+                        <div class="top">
+                            <p>Виберіть дату, щоб продовжити</p>
+                        </div>
+                        <div class="main-block">
+                            <div class="calendar-block">
+                                <div class="month-name">
+                                    <img src="img/search/left-arrow.png" alt="" class="back-month">
+                                    <h2 class="month-headline">Лютий 2019</h2>
+                                </div>
+                                <ul class="day-names">
+                                    <li>Пн</li>
+                                    <li>Вт</li>
+                                    <li>Ср</li>
+                                    <li>Чт</li>
+                                    <li>Пт</li>
+                                    <li>Сб</li>
+                                    <li>Вс</li>
+                                </ul>
+                                <ul class="day-nums">
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                    <li>1</li>
+                                    <li>2</li>
+                                    <li>3</li>
+                                    <li class="first-day">4</li>
+                                    <li class="between-day">5</li>
+                                    <li class="between-day">6</li>
+                                    <li class="between-day">7</li>
+                                    <li class="last-day">8</li>
+                                    <li>9</li>
+                                    <li>10</li>
+                                    <li>11</li>
+                                    <li>12</li>
+                                    <li>13</li>
+                                    <li>14</li>
+                                    <li>15</li>
+                                    <li>16</li>
+                                    <li>17</li>
+                                    <li>18</li>
+                                    <li>19</li>
+                                    <li>20</li>
+                                    <li>21</li>
+                                    <li>22</li>
+                                    <li>23</li>
+                                    <li>24</li>
+                                    <li>25</li>
+                                    <li>26</li>
+                                    <li>27</li>
+                                    <li>28</li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                </ul>
+                            </div>
+                            <div class="calendar-block">
+                                <div class="month-name">
+                                    <h2 class="month-headline">Березень 2019</h2>
+                                    <img src="img/search/right-arrow.png" alt="" class="next-month">
+                                </div>
+                                <ul class="day-names">
+                                    <li>Пн</li>
+                                    <li>Вт</li>
+                                    <li>Ср</li>
+                                    <li>Чт</li>
+                                    <li>Пт</li>
+                                    <li>Сб</li>
+                                    <li>Вс</li>
+                                </ul>
+                                <ul class="day-nums">
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                    <li>1</li>
+                                    <li>2</li>
+                                    <li>3</li>
+                                    <li>4</li>
+                                    <li>5</li>
+                                    <li>6</li>
+                                    <li>7</li>
+                                    <li>8</li>
+                                    <li>9</li>
+                                    <li>10</li>
+                                    <li>11</li>
+                                    <li>12</li>
+                                    <li>13</li>
+                                    <li>14</li>
+                                    <li>15</li>
+                                    <li>16</li>
+                                    <li>17</li>
+                                    <li>18</li>
+                                    <li>19</li>
+                                    <li>20</li>
+                                    <li>21</li>
+                                    <li>22</li>
+                                    <li>23</li>
+                                    <li>24</li>
+                                    <li>25</li>
+                                    <li>26</li>
+                                    <li>27</li>
+                                    <li>28</li>
+                                    <li>29</li>
+                                    <li>30</li>
+                                    <li>31</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="appartments" onclick="toggleOpenDate(appartmentsDropdown)">
+                    <div class="appartments-input">
+                        <img src="img/search/person.png" alt="">
+                        <p>3 номера</p>
+                        <p>·</p>
+                        <p>2 дорослих</p>
+                        <p>·</p>
+                        <p>0 дітей</p>
+                    </div>
+                    <div class="appartments-dropdown displayNone">
+                        <div class="appartments-dropdown-container">
+                            <ul>
+                                <li>
+                                    <p class="appartments__drop-text">Номерів</p>
+                                    <div class="appartments__counter">
+                                        <div class="minus appartments__button"><span>-</span></div>
+                                        <p class="counter-string">3</p>
+                                        <div class="plus appartments__button"><span>+</span></div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <p class="appartments__drop-text">Дорослих</p>
+                                    <div class="appartments__counter">
+                                        <div class="minus appartments__button"><span>-</span></div>
+                                        <p class="counter-string">2</p>
+                                        <div class="plus appartments__button"><span>+</span></div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <p class="appartments__drop-text">Дітей</p>
+                                    <div class="appartments__counter">
+                                        <div class="minus appartments__button"><span>-</span></div>
+                                        <p class="counter-string">0</p>
+                                        <div class="plus appartments__button"><span>+</span></div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <button class="search-button">Знайти</button>
+            </div>
+        </section>
+
+        <section class="all-inclusive">
+            <section class="all-inclusive__container">
+                <h2 class="block-headline all-inclusive__headline">Тижневі тури «Все включено»</h2>
+
+                <div class="all-inclusive__inner-container">
+                    <div class="all-inclusive__left" onclick="prev(tours)"></div>
+
+                    <div class="all-inclusive__slider">
+                        <ul class="all-inclusive__list">
+                            <li class="all-inclusive__element all-inclusive__element-tour">
+                                <div class="all-inclusive__image">
+                                    <div class="discount">
+                                        <p>Знижка 10%</p>
+                                    </div>
+                                    <img src="img/all-inclusive/citys/hoverla.jpg" alt="" class="all-inclusive__image">
+                                </div>
+                                <div class="all-inclusive__price">
+                                    <img src="img/all-inclusive/price-icon.png" alt="" class="all-inclusive__price-icon">
+                                    <p class="all-inclusive__price-text">від 1 800 грн</p>
+                                </div>
+                                <div class="all-inclusive__describe">
+                                    <h3 class="all-inclusive__describe-headline">Тижневий тур «Карпати - Ворохта цілий рік»</h3>
+                                    <p class="all-inclusive__desctribe-text">8 варіантів відпочинку на вибір щодня, Говерла, Рафтинг, Почаївська лавра, + з листопада по квітень - «Лижний тур на Буковель».</p>
+                                    <div class="all-inclusive__stars">
+                                        <p>Готель</p>
+                                        <img src="img/all-inclusive/star-icon.png" alt="" class="all-inclusive__star-icon">
+                                        <img src="img/all-inclusive/star-icon.png" alt="" class="all-inclusive__star-icon">
+                                        <img src="img/all-inclusive/star-icon.png" alt="" class="all-inclusive__star-icon">
+                                    </div>
+                                    <div class="all-inclusive__reviews">
+                                        <div class="all-inclusive__assessment">
+                                            <p class="all-inclusive__assessment-text">9.0</p>
+                                        </div>
+                                        <p class="all-inclusive__reviews-text">Чудово</p>
+                                        <p class="all-inclusive__dot">·</p>
+                                        <p class="all-inclusive__quantity">12 відгуків</p>
+                                        <img src="img/all-inclusive/like-icon.png" alt="" class="all-inclusive__like-icon">
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="all-inclusive__element all-inclusive__element-tour">
+                                <div class="all-inclusive__image">
+                                    <div class="discount">
+                                        <p>ТОП пропозиція</p>
+                                    </div>
+                                    <img src="img/all-inclusive/citys/truskavets.png" alt="" class="all-inclusive__image">
+                                </div>
+                                <div class="all-inclusive__price">
+                                    <img src="img/all-inclusive/price-icon.png" alt="" class="all-inclusive__price-icon">
+                                    <p class="all-inclusive__price-text">від 2 700 грн</p>
+                                </div>
+                                <div class="all-inclusive__describe">
+                                    <h3 class="all-inclusive__describe-headline">Тижневий тур Трускавець 365 - Карпати - Львів - Закарпаття</h3>
+                                    <p class="all-inclusive__desctribe-text">Активно-оздоровчо-екскурсійний тижневий тур ...</p>
+                                    <div class="all-inclusive__stars">
+                                        <p>Готель</p>
+                                        <img src="img/all-inclusive/star-icon.png" alt="" class="all-inclusive__star-icon">
+                                        <img src="img/all-inclusive/star-icon.png" alt="" class="all-inclusive__star-icon">
+                                        <img src="img/all-inclusive/star-icon.png" alt="" class="all-inclusive__star-icon">
+                                    </div>
+                                    <div class="all-inclusive__reviews">
+                                        <div class="all-inclusive__assessment">
+                                            <p class="all-inclusive__assessment-text">9.0</p>
+                                        </div>
+                                        <p class="all-inclusive__reviews-text">Чудово</p>
+                                        <p class="all-inclusive__dot">·</p>
+                                        <p class="all-inclusive__quantity">12 відгуків</p>
+                                        <img src="img/all-inclusive/like-icon.png" alt="" class="all-inclusive__like-icon">
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="all-inclusive__element all-inclusive__element-tour">
+                                <div class="all-inclusive__image">
+                                    <img src="img/all-inclusive/citys/cherkasy.png" alt="" class="all-inclusive__image">
+                                </div>
+                                <div class="all-inclusive__price">
+                                    <img src="img/all-inclusive/price-icon.png" alt="" class="all-inclusive__price-icon">
+                                    <p class="all-inclusive__price-text">від 2 000 грн</p>
+                                </div>
+                                <div class="all-inclusive__describe">
+                                    <h3 class="all-inclusive__describe-headline">Тижневий тур «ЧЕРКАЩИНА 365»</h3>
+                                    <p class="all-inclusive__desctribe-text">Шевченківський національний заповідник у Каневі, край Богдана Хмельницького - Чигиринщина, Холодний Яр.</p>
+                                    <div class="all-inclusive__stars">
+                                        <p>Готель</p>
+                                        <img src="img/all-inclusive/star-icon.png" alt="" class="all-inclusive__star-icon">
+                                        <img src="img/all-inclusive/star-icon.png" alt="" class="all-inclusive__star-icon">
+                                        <img src="img/all-inclusive/star-icon.png" alt="" class="all-inclusive__star-icon">
+                                    </div>
+                                    <div class="all-inclusive__reviews">
+                                        <div class="all-inclusive__assessment">
+                                            <p class="all-inclusive__assessment-text">9.0</p>
+                                        </div>
+                                        <p class="all-inclusive__reviews-text">Чудово</p>
+                                        <p class="all-inclusive__dot">·</p>
+                                        <p class="all-inclusive__quantity">12 відгуків</p>
+                                        <img src="img/all-inclusive/like-icon.png" alt="" class="all-inclusive__like-icon">
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="all-inclusive__right" onclick="next(tours)" ></div>
+                </div>
+            </section>
+        </section>
+
+        <section class="services">
+
+            <h2 class="block-headline services__headline">У вартість туру включено</h2>
+
+            <ul class="services__list">
+
+                <li class="services__item">
+                    <img src="img/services/1.png" alt="" class="services__img">
+                    <p class="services__text">Проживання 7 днів у готелі мережі «Відпочинок 365»</p>
+                </li>
+
+                <li class="services__item">
+                    <img src="img/services/2.png" alt="" class="services__img">
+                    <p class="services__text">Трансфер з вокзалів</p>
+                </li>
+
+                <li class="services__item">
+                    <img src="img/services/3.png" alt="" class="services__img">
+                    <p class="services__text">Харчування</p>
+                </li>
+
+                <li class="services__item">
+                    <img src="img/services/4.png" alt="" class="services__img">
+                    <p class="services__text">Щоденні автобусні екскурсії</p>
+                </li>
+
+                <li class="services__item">
+                    <img src="img/services/5.png" alt="" class="services__img">
+                    <p class="services__text">Щоденні незабутні походи та подорожі</p>
+                </li>
+
+                <li class="services__item">
+                    <img src="img/services/6.png" alt="" class="services__img">
+                    <p class="services__text">Вечірні розважальні шоу та програми</p>
+                </li>
+
+            </ul>
+
+        </section>
+
+        <section class="video">
+            <div class="video-container">
+                <iframe class="video-file" src="https://www.youtube.com/embed/GZLowUVpuoA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </section>
+
+        <section class="about-us">
+            <div class="about-us__container">
+                <h2 class="block-headline about-us__headline">Чому обирають нас?</h2>
+                <ul class="about-us__list">
+
+                    <li class="about-us__item">
+                        <div>
+                            <img src="img/about-us/1.png" alt="" class="about-us__icon">
+                        </div>
+                        <p class="about-us__text">Сім‘я готелів «Відпочинок 365» складається з гостинних та затишних готелів - «Ворохта 365» 3-зірковий , «Трускавець 365» 4-зірковий , «Київ 365» 4-зірковий , «Черкащина 365» 3-зірковий.</p>
+                    </li>
+
+                    <li class="about-us__item">
+                        <div>
+                            <img src="img/about-us/5.png" alt="" class="about-us__icon">
+                        </div>
+                        <p class="about-us__text">Сьогодні Мережа Готелів «Відпочинок 365» є лідером організації відпочинку в Україні за ціною - якістю - доступністю.</p>
+                    </li>
+
+                    <li class="about-us__item">
+                        <div>
+                            <img src="img/about-us/2.png" alt="" class="about-us__icon">
+                        </div>
+                        <p class="about-us__text">Вже більше 10 років наша мережа займається організацією комфортного та пізнавального відпочинку.</p>
+                    </li>
+
+                    <li class="about-us__item">
+                        <div>
+                            <img src="img/about-us/6.png" alt="" class="about-us__icon">
+                        </div>
+                        <p class="about-us__text">Ми поєднуємо комфортний відпочинок, подорожі
+                            та оздоровлення, що не залежать від погоди та пори року. Всі готелі об'єднані спільними якостями - гостинність, бажанням догодити та зробити приємне гостю.</p>
+                    </li>
+
+                    <li class="about-us__item">
+                        <div>
+                            <img src="img/about-us/3.png" alt="" class="about-us__icon">
+                        </div>
+                        <p class="about-us__text">В наших Тижневих Турах «Все Включено» ми надаємо
+                            не тільки якісні готельні послуги, але й знайомимо гостей
+                            з Карпатами, Закарпаттям, Львівщиною та Черкащиною
+                            у всій їх красі та різноманітті.</p>
+                    </li>
+
+                    <li class="about-us__item">
+                        <div>
+                            <img src="img/about-us/7.png" alt="" class="about-us__icon">
+                        </div>
+                        <p class="about-us__text">Ми робимо комфортним та доступним для усіх гірськолижний відпочинок та маємо власний курорт «Крутогір 365»</p>
+                    </li>
+
+                    <li class="about-us__item">
+                        <div>
+                            <img src="img/about-us/4.png" alt="" class="about-us__icon">
+                        </div>
+                        <p class="about-us__text">Гарантуємо якість та Повернемо Гроші за послуги,
+                            які не сподобалися! Запрошуємо в Гості!</p>
+                    </li>
+
+                    <li class="about-us__item">
+                        <div>
+                            <img src="img/about-us/8.png" alt="" class="about-us__icon">
+                        </div>
+                        <p class="about-us__text">Ми багато подорожуємо та переймаємо кращі практики
+                            на свої готелі та Тижневі Тури «Все Включено». Саме тому ми отримуємо велику кількість позитивних відгуків, рекомендацій та повторних приїздів від наших гостей.</p>
+                    </li>
+
+                </ul>
+            </div>
+        </section>
+
+        <section class="all-inclusive all-inclusive_second">
+            <section class="all-inclusive__container">
+                <h2 class="block-headline all-inclusive__headline">Готельні послуги</h2>
+
+                <div class="all-inclusive__inner-container">
+                    <div class="all-inclusive__left " onclick="prev(hotels)"></div>
+
+                    <div class="all-inclusive__slider">
+                        <ul class="all-inclusive__list">
+                            <li class="all-inclusive__element all-inclusive__element-hotels">
+                                <div class="all-inclusive__image">
+                                    <div class="discount">
+                                        <p>Акція</p>
+                                    </div>
+                                    <img src="img/all-inclusive/hotels/truskavets.jpg" alt="" class="all-inclusive__image">
+                                </div>
+                                <div class="all-inclusive__price">
+                                    <img src="img/all-inclusive/price-icon.png" alt="" class="all-inclusive__price-icon">
+                                    <p class="all-inclusive__price-text">від 2 400 грн</p>
+                                </div>
+                                <div class="all-inclusive__describe">
+                                    <h3 class="all-inclusive__describe-headline">Туристичний комплекс «Трускавець»</h3>
+                                    <p class="all-inclusive__city">м.Трускавець</p>
+                                    <div class="all-inclusive__stars">
+                                        <img src="img/all-inclusive/star-icon.png" alt="" class="all-inclusive__star-icon">
+                                        <img src="img/all-inclusive/star-icon.png" alt="" class="all-inclusive__star-icon">
+                                        <img src="img/all-inclusive/star-icon.png" alt="" class="all-inclusive__star-icon">
+                                    </div>
+                                    <div class="all-inclusive__reviews">
+                                        <div class="all-inclusive__assessment">
+                                            <p class="all-inclusive__assessment-text">9.0</p>
+                                        </div>
+                                        <p class="all-inclusive__reviews-text">Чудово</p>
+                                        <p class="all-inclusive__dot">·</p>
+                                        <p class="all-inclusive__quantity">12 відгуків</p>
+                                        <img src="img/all-inclusive/like-icon.png" alt="" class="all-inclusive__like-icon">
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="all-inclusive__element all-inclusive__element-hotels">
+                                <div class="all-inclusive__image">
+                                    <img src="img/all-inclusive/hotels/vorohta.png" alt="" class="all-inclusive__image">
+                                </div>
+                                <div class="all-inclusive__price">
+                                    <img src="img/all-inclusive/price-icon.png" alt="" class="all-inclusive__price-icon">
+                                    <p class="all-inclusive__price-text">від 1 000 грн</p>
+                                </div>
+                                <div class="all-inclusive__describe">
+                                    <h3 class="all-inclusive__describe-headline">Готель «Ворохта»</h3>
+                                    <p class="all-inclusive__city">с.Ворохта</p>
+                                    <div class="all-inclusive__stars">
+                                        <p>Без рейтингу</p>
+                                    </div>
+                                    <div class="all-inclusive__reviews">
+                                        <div class="all-inclusive__assessment">
+                                            <p class="all-inclusive__assessment-text">9.0</p>
+                                        </div>
+                                        <p class="all-inclusive__reviews-text">Чудово</p>
+                                        <p class="all-inclusive__dot">·</p>
+                                        <p class="all-inclusive__quantity">12 відгуків</p>
+                                        <img src="img/all-inclusive/like-icon.png" alt="" class="all-inclusive__like-icon">
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="all-inclusive__element all-inclusive__element-hotels">
+                                <div class="all-inclusive__image">
+                                    <img src="img/all-inclusive/hotels/kyiv.png" alt="" class="all-inclusive__image">
+                                </div>
+                                <div class="all-inclusive__price">
+                                    <img src="img/all-inclusive/price-icon.png" alt="" class="all-inclusive__price-icon">
+                                    <p class="all-inclusive__price-text">від 3 300 грн</p>
+                                </div>
+                                <div class="all-inclusive__describe">
+                                    <h3 class="all-inclusive__describe-headline">Готель «Київ»</h3>
+                                    <p class="all-inclusive__city">м.Київ</p>
+                                    <div class="all-inclusive__stars">
+                                        <img src="img/all-inclusive/star-icon.png" alt="" class="all-inclusive__star-icon">
+                                        <img src="img/all-inclusive/star-icon.png" alt="" class="all-inclusive__star-icon">
+                                        <img src="img/all-inclusive/star-icon.png" alt="" class="all-inclusive__star-icon">
+                                        <img src="img/all-inclusive/star-icon.png" alt="" class="all-inclusive__star-icon">
+                                    </div>
+                                    <div class="all-inclusive__reviews">
+                                        <div class="all-inclusive__assessment">
+                                            <p class="all-inclusive__assessment-text">9.0</p>
+                                        </div>
+                                        <p class="all-inclusive__reviews-text">Чудово</p>
+                                        <p class="all-inclusive__dot">·</p>
+                                        <p class="all-inclusive__quantity">12 відгуків</p>
+                                        <img src="img/all-inclusive/like-icon.png" alt="" class="all-inclusive__like-icon">
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="all-inclusive__right" onclick="next(hotels)"></div>
+                </div>
+            </section>
+        </section>
+
+        <section class="slide-top">
+            <div class="slide-top__container">
+                <div class="slide-top__arrow"></div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="footer__row-container">
+            <section class="footer__row">
+                <div class="footer__site-map">
+                    <h3 class="footer__site-map-headline">Карта сайту</h3>
+
+                    <div class="footer__site-map-block">
+                        <ul class="footer__site-map-list">
+
+                            <li class="footer__site-map-item">
+                                <a href="" class="footer__site-map-link">Тури</a>
+                            </li>
+
+                            <li class="footer__site-map-item">
+                                <a href="" class="footer__site-map-link">Проживання</a>
+                            </li>
+
+                            <li class="footer__site-map-item">
+                                <a href="" class="footer__site-map-link">Послуги</a>
+                            </li>
+
+                            <li class="footer__site-map-item">
+                                <a href="" class="footer__site-map-link">Відгуки</a>
+                            </li>
+
+                        </ul>
+
+                        <ul class="footer__site-map-list">
+
+                            <li class="footer__site-map-item">
+                                <a href="" class="footer__site-map-link">Партнерам</a>
+                            </li>
+
+                            <li class="footer__site-map-item">
+                                <a href="" class="footer__site-map-link">Часто задавані питання</a>
+                            </li>
+
+                            <li class="footer__site-map-item">
+                                <a href="" class="footer__site-map-link">Блог</a>
+                            </li>
+
+                            <li class="footer__site-map-item">
+                                <a href="" class="footer__site-map-link">Контакти</a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="footer__contacts">
+                    <h3 class="footer__contacts-headline">Контакти</h3>
+
+                    <ul class="footer__contacts-list">
+
+                        <li class="footer__contacts-item">
+                            <a href="tel:+380800505365" class="footer__contacts-link">
+                                0 800 505 365
+                                <span>(Безкоштовно)</span>
+                            </a>
+                        </li>
+
+                        <li class="footer__contacts-item">
+                            <a href="tel:+380800505365" class="footer__contacts-link">
+                                080 050-53-65
+                            </a>
+                        </li>
+
+                        <li class="footer__contacts-item">
+                            <a href="tel:+380675240524" class="footer__contacts-link">
+                                067 524-05-24
+                            </a>
+                        </li>
+
+                        <li class="footer__contacts-item">
+                            <a href="" class="footer__contacts-link">
+                                tur365@gmail.com
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+                <section class="footer__social">
+                    <div class="footer__social-list">
+                        <h3 class="footer__social-headline">Ми на Facebook</h3>
+                        <ul>
+                            <li>
+                                <a href="">
+                                    <img src="img/social-icons/facebook.png" alt="">
+                                    <span>Черкаси 365</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                <img src="img/social-icons/facebook.png" alt="">
+                                <span>Київ 365</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                <img src="img/social-icons/facebook.png" alt="">
+                                <span>Ялта 365</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                <img src="img/social-icons/facebook.png" alt="">
+                                <span>Трускавець 365</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                <img src="img/social-icons/facebook.png" alt="">
+                                <span>Ворохта 365</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer__social-list">
+                        <h3 class="footer__social-headline">Ми в Instagram</h3>
+                        <ul>
+                            <li>
+                                <a href="">
+                                <img src="img/social-icons/instagram.png" alt="">
+                                <span>Трускавець 365</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                <img src="img/social-icons/instagram.png" alt="">
+                                <span>Ворохта 365</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                <img src="img/social-icons/instagram.png" alt="">
+                                <span>Київ 365</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                <img src="img/social-icons/instagram.png" alt="">
+                                <span>Ялта 365</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer__social-list">
+                        <h3 class="footer__social-headline">Ми на YouTube</h3>
+                        <ul>
+                            <li>
+                                <a href="">
+                                <img src="img/social-icons/youtube.png" alt="">
+                                <span>Київ 365</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                <img src="img/social-icons/youtube.png" alt="">
+                                <span>Ялта 365</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+            </section>
+            <section class="footer__row">
+                <div class="subs-container">
+                    <h3 class="footer__subscribe">Підписка</h3>
+                    <form action="">
+                        <input type="text" name="userName" placeholder="Ваше імя">
+                        <input type="email" name="userEmail" placeholder="Ваш E-mail">
+                        <button>Підписатися</button>
+                    </form>
+                </div>
+            </section>
+        </div>
+        <div class="footer__container-copywrite">
+            <section class="footer__row-copy">
+                <p>© 2014-2019 ВІДОЧИНОК 365. Всі права захищені.</p>
+            </section>
+        </div>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/go-top.js"></script>
+    <script src="js/slider.js"></script>
+</body>
+</html>
